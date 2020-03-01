@@ -1,3 +1,5 @@
+import os
+
 import requests
 import time
 import pandas as pd
@@ -32,7 +34,7 @@ def iter_fuc():
 if __name__ == "__main__":
     print("loading...")
     result = []
-    p = Pool(processes=32)
+    p = Pool(processes=os.cpu_count() * 2 if os.cpu_count() else 1)
     process_result = p.map(get_block_info, iter_fuc())
     for pr in process_result:
         for r in pr:

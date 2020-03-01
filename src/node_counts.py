@@ -1,3 +1,5 @@
+import os
+
 import requests
 import time
 import matplotlib.pyplot as plt
@@ -24,7 +26,7 @@ if __name__ == "__main__":
 
         return p_result
 
-    p = Pool(processes=32)
+    p = Pool(processes=os.cpu_count() * 2 if os.cpu_count() else 1)
     process_result = p.map(get_data, (range(1, pages)))
     for pr in process_result:
         for r in pr:
