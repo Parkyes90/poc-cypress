@@ -1,0 +1,15 @@
+{
+  "cypress/integration/sample_spec.js": {
+    "테스트 1 테스트 세부사항 1": "passed",
+    "테스트 1 테스트 세부사항 2": "passed",
+    "테스트 1 테스트 세부사항 3": "failed"
+  },
+  "totals": {
+    "suites": 1,
+    "tests": 3,
+    "failed": 1,
+    "passed": 2,
+    "pending": 0,
+    "skipped": 0
+  }
+}

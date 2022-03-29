@@ -17,13 +17,17 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
-    "cypress": "~9.5.3"
+    "cypress": "~9.5.3",
+    "cypress-json-results": "^1.2.1",
+    "start-server-and-test": "^1.14.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open",
+    "cypress:run": "start-server-and-test 3000 'cypress run'"
   },
   "eslintConfig": {
     "extends": [
